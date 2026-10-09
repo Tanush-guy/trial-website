@@ -1,26 +1,62 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Website</title>
+  <title>Login Sign Up Form</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>My Website</h1>
-    <p>Welcome to my first website.</p>
-  </header>
 
-  <main>
-    <section>
-      <h2>About</h2>
-      <p>This is a simple website built with HTML, CSS, and JavaScript.</p>
-    </section>
+  <div class="container">
+    <div class="tabs">
+      <button id="loginTab" class="active">Login</button>
+      <button id="signupTab">Sign up</button>
+    </div>
 
-    <button id="helloBtn">Click Me</button>
-  </main>
+    <form id="loginForm" class="form active">
+      <h1>Login</h1>
+      <p>Use your email and password.</p>
+
+      <label>Email address</label>
+      <input type="email" placeholder="you@example.com" required />
+
+      <label>Password</label>
+      <div class="password-box">
+        <input id="loginPassword" type="password" placeholder="Enter your password" required />
+        <button type="button" onclick="togglePassword('loginPassword', this)">Show</button>
+      </div>
+
+      <div class="row">
+        <label class="remember">
+          <input type="checkbox" />
+          Remember me
+        </label>
+        <a href="#">Forgot password?</a>
+      </div>
+
+      <button class="main-btn" type="submit">Login</button>
+    </form>
+
+    <form id="signupForm" class="form">
+      <h1>Sign up</h1>
+      <p>Create a new account.</p>
+
+      <label>Full name</label>
+      <input type="text" placeholder="Your name" required />
+
+      <label>Email address</label>
+      <input type="email" placeholder="you@example.com" required />
+
+      <label>Password</label>
+      <div class="password-box">
+        <input id="signupPassword" type="password" placeholder="Create password" required />
+        <button type="button" onclick="togglePassword('signupPassword', this)">Show</button>
+      </div>
+
+      <button class="main-btn" type="submit">Sign up</button>
+    </form>
+  </div>
 
   <script src="script.js"></script>
 </body>

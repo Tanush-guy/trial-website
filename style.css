@@ -1,28 +1,139 @@
-/* style.css */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  color: #222;
+  background: #f7faf8;
+  color: #14201a;
 }
 
-header {
-  background: #111;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-main {
-  max-width: 800px;
+.container {
+  width: 90%;
+  max-width: 720px;
   margin: 40px auto;
-  padding: 0 20px;
+  padding: 30px;
+  background: white;
 }
 
-button {
-  padding: 12px 18px;
+.tabs {
+  display: flex;
+  background: #edf5f0;
+  border: 1px solid #d5e5dc;
+  border-radius: 12px;
+  padding: 8px;
+  margin-bottom: 45px;
+}
+
+.tabs button {
+  width: 50%;
+  padding: 22px;
   border: none;
-  background: #2563eb;
+  background: transparent;
+  font-size: 24px;
+  font-weight: bold;
+  color: #65746c;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.tabs button.active {
+  background: white;
+  color: #14201a;
+}
+
+.form {
+  display: none;
+}
+
+.form.active {
+  display: block;
+}
+
+h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 24px;
+  color: #65746c;
+  margin-bottom: 35px;
+}
+
+label {
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 25px 0 12px;
+}
+
+input {
+  width: 100%;
+  height: 62px;
+  padding: 0 20px;
+  font-size: 22px;
+  border: 1px solid #d5e5dc;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.password-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d5e5dc;
+  border-radius: 12px;
+}
+
+.password-box input {
+  border: none;
+  outline: none;
+}
+
+.password-box button {
+  margin-right: 10px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #dff2e8;
+  color: #13733f;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 28px 0;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  color: #65746c;
+}
+
+.remember input {
+  width: 25px;
+  height: 25px;
+}
+
+a {
+  color: #177a45;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main-btn {
+  width: 100%;
+  padding: 24px;
+  border: none;
+  border-radius: 12px;
+  background: #177a45;
   color: white;
+  font-size: 24px;
+  font-weight: bold;
   cursor: pointer;
 }
